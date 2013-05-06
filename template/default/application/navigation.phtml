@@ -1,0 +1,9 @@
+<div class="nav-collapse collapse">
+    <ul class="nav">
+        <?php foreach($this->menus as $menu): ?>
+        <li class="active">
+            <a href="<?php echo $menu->getLink() ?>"><?php echo $this->translate($menu->getMenuTitle()) ?></a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
