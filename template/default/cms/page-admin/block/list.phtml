@@ -1,0 +1,33 @@
+<div class="pageadmin-list">
+    <table class="table table-bordered">
+        <tr>
+            <th width="40"><?php echo $this->translate('No') ?></th>
+            <th><?php echo $this->translate('Name') ?></th>
+            <th><?php echo $this->translate('Title') ?></th>
+            <th><?php echo $this->translate('Created') ?></th>
+            <th><?php echo $this->translate('Updated') ?></th>
+            <th><?php echo $this->translate('Active') ?></th>
+            <th><?php echo $this->translate('Action') ?></th>
+        </tr>
+        <?php foreach($this->pages as $index => $page): ?>
+        <tr>
+            <td><?php echo ++$index ?></td>
+            <td><?php echo $page->getPageName() ?></td>
+            <td><?php echo $page->getPageTitle() ?></td>
+            <td><?php echo $page->getCreatedDate()->format('d/m/Y H:i') ?></td>
+            <td><?php echo $page->getUpdatedDate() != null ? $page->getUpdatedDate()->format('d/m/Y H:i') : '' ?></td>
+            <td>
+                <?php if($page->getIsActive() == 1): ?>
+                    <span class="label label-success"><?php echo $this->translate('Active') ?></span>
+                <?php else: ?>
+                    <span class="label label-info"><?php echo $this->translate('Active') ?></span>
+                <?php endif; ?>
+            </td>
+            <td>
+                <a href=""><span class="icon-edit" title="<?php echo $this->translate('Edit') ?>"></span></a>
+                <a href=""><span class="icon-remove" title="<?php echo $this->translate('Remove') ?>"></span></a>
+            </td>
+        </tr>
+        <?php endforeach ?>
+    </table>
+</div>

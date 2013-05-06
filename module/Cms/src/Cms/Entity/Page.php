@@ -47,6 +47,16 @@ class Page
      */
     protected $isDeleted;
 
+    /**
+     * @ORM\Column(type="datetime", name="CreatedDate")
+     */
+    protected $createdDate;
+
+    /**
+     * @ORM\Column(type="datetime", name="UpdatedDate")
+     */
+    protected $updatedDate;
+
     public function setPageId($pageId)
     {
         $this->pageId = $pageId;
@@ -56,6 +66,8 @@ class Page
     {
         return $this->pageId;
     }
+
+
 
     public function setIsActive($isActive)
     {
@@ -105,6 +117,26 @@ class Page
     public function getPageTitle()
     {
         return $this->pageTitle;
+    }
+
+    public function setCreatedDate($createdDate)
+    {
+        $this->createdDate = $createdDate;
+    }
+
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
+    }
+
+    public function setUpdatedDate($updatedDate)
+    {
+        $this->updatedDate = $updatedDate;
+    }
+
+    public function getUpdatedDate()
+    {
+        return $this->updatedDate;
     }
 
 

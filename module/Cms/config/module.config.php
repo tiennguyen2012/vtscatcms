@@ -52,5 +52,8 @@ return array(
                 )
             )
         )
-    )
+    ),
+    'controller_layouts' => array(
+        'Cms\Controller\PageAdmin' =>  'layout/admin',
+    ),
 );
