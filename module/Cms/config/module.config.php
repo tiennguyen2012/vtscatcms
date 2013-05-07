@@ -9,7 +9,7 @@ return array(
     // The following section is new and should be added to your file
     'router' => array(
         'routes' => array(
-            'cms' => array(
+            'page' => array(
                 'type' => 'segment',
                 'options' => array(
                     'route' => '/page[/][:action][/:id]',
@@ -23,7 +23,7 @@ return array(
                     )
                 )
             ),
-            'admin-cms' => array(
+            'admin-page' => array(
                 'type' => 'segment',
                 'options' => array(
                     'route' => '/admin/page[/][:action][/:id]',

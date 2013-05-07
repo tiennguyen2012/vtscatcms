@@ -6,14 +6,18 @@ use Zend\Mvc\Controller\AbstractActionController;
 class AdminActionController extends AbstractActionController
 {
     /**
+     * On dispatch
+     * @param \Zend\Mvc\MvcEvent $e
+     * @return mixed|void
+     */
+    public function onDispatch(\Zend\Mvc\MvcEvent $e) {
+        $e->getTarget()->layout('layout/admin');
+    }
+
+    /**
      * @var EntityManager
      */
     protected $entityManager;
-
-    public function __construct()
-    {
-
-    }
 
     /**
      * Sets the EntityManager

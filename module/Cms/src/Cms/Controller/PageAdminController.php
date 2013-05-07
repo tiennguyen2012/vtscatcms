@@ -13,10 +13,9 @@ use Zend\View\Model\ViewModel;
 
 class PageAdminController extends AdminActionController {
 
-    public function __construct(){
-        parent::__construct();
-        $this->getEvent()->getViewModel()->setTemplate('layout/admin');
-    }
+//    public function __construct(){
+//        $this->getEvent()->getViewModel()->setTemplate('layout/admin');
+//    }
 
 	public function indexAction(){
 		return new ViewModel($this->getViewModelParams());
