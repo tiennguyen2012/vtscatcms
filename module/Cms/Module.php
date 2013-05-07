@@ -36,12 +36,6 @@ class Module
     {
         return array(
             'factories' => array(
-                'Cms\Block\BlockCms' => function ($sm) {
-                    return new \Cms\Block\BlockCms($sm);
-                },
-                'Cms\Block\BlockCmsAdmin' => function ($sm) {
-                    return new \Cms\Block\BlockCmsAdmin($sm);
-                },
                 'Cms\Block\BlockTemplate' => function ($sm) {
                     return new \Cms\Block\BlockTemplate($sm);
                 },
@@ -50,6 +44,9 @@ class Module
                 },
                 'Cms\Block\BlockPageAdmin' => function ($sm) {
                     return new \Cms\Block\BlockPageAdmin($sm);
+                },
+                'Cms\Model\PageModel' => function ($sm) {
+                    return new \Cms\Model\PageModel($sm);
                 }
             )
         );

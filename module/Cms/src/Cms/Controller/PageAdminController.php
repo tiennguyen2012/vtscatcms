@@ -13,16 +13,17 @@ use Zend\View\Model\ViewModel;
 
 class PageAdminController extends AdminActionController {
 
-//    public function __construct(){
-//        $this->getEvent()->getViewModel()->setTemplate('layout/admin');
-//    }
-
 	public function indexAction(){
 		return new ViewModel($this->getViewModelParams());
 	}
-	
+
 	public function listAction(){
 
 		return new ViewModel($this->getViewModelParams());
 	}
+
+    public function updateStatusAction(){
+        $pageModel = $this->getEventManager()->getRepository('Cms\Model\PageModel');
+        $pageModel->add();
+    }
 }
