@@ -2,6 +2,7 @@
 
 namespace Vts\Core\Mvc\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
+use Zend\ServiceManager\ServiceManager;
 
 class AdminActionController extends AbstractActionController
 {
@@ -12,10 +13,11 @@ class AdminActionController extends AbstractActionController
      */
     public function onDispatch(\Zend\Mvc\MvcEvent $e) {
         $e->getTarget()->layout('layout/admin');
+        parent::onDispatch($e);
     }
 
     /**
-     * @var EntityManager
+     * @var Zend\ServiceManager\ServiceManager
      */
     protected $entityManager;
 
@@ -39,7 +41,7 @@ class AdminActionController extends AbstractActionController
      * and then returns it
      *
      * @access protected
-     * @return EntityManager
+     * @return Zend\ServiceManager\ServiceManager
      */
     protected function getEntityManager()
     {

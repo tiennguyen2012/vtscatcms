@@ -36,6 +36,9 @@ class Module
     {
         return array(
             'factories' => array(
+                /**
+                 * Block cms
+                 */
                 'Cms\Block\BlockTemplate' => function ($sm) {
                     return new \Cms\Block\BlockTemplate($sm);
                 },
@@ -46,6 +49,12 @@ class Module
                     return new \Cms\Block\BlockPageAdmin($sm);
                 },
                 'Cms\Model\PageModel' => function ($sm) {
+                    return new \Cms\Model\PageModel($sm);
+                },
+                /**
+                 * Model
+                 */
+                'Cms\Model\PageModel' => function($sm){
                     return new \Cms\Model\PageModel($sm);
                 }
             )

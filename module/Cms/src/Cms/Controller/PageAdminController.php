@@ -14,16 +14,14 @@ use Zend\View\Model\ViewModel;
 class PageAdminController extends AdminActionController {
 
 	public function indexAction(){
-		return new ViewModel($this->getViewModelParams());
+		return new ViewModel();
 	}
 
 	public function listAction(){
-
-		return new ViewModel($this->getViewModelParams());
+		return new ViewModel();
 	}
 
-    public function updateStatusAction(){
-        $pageModel = $this->getEventManager()->getRepository('Cms\Model\PageModel');
-        $pageModel->add();
+    public function changeStatusAction(){
+
     }
 }

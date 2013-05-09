@@ -17,7 +17,7 @@
             <td><?php echo $page->getCreatedDate()->format('d/m/Y H:i') ?></td>
             <td><?php echo $page->getUpdatedDate() != null ? $page->getUpdatedDate()->format('d/m/Y H:i') : '' ?></td>
             <td>
-                <a href="<?php echo $this->url('admin-page', array('action' => 'update-status', 'id' => $page->getPageId())) ?>">
+                <a href="<?php echo $this->url('admin-page', array('action' => 'change-status', 'id' => $page->getPageId())) ?>">
                     <?php if ($page->getIsActive() === true): ?>
                     <span class="label label-success"><?php echo $this->translate('Active') ?></span>
                     <?php else: ?>
